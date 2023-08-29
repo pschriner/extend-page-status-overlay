@@ -1,0 +1,31 @@
+{
+  "name": "pschriner/extend-page-status-overlay",
+  "description": "Extend the page status overlay by taking extendToSubpages into consideration",
+  "keywords": [
+    "typo3",
+    "backend"
+  ],
+  "authors": [
+    {
+      "name": "Patrick Schriner",
+      "email": "patrick.schriner@diemedialen.de",
+      "role": "Developer"
+    }
+  ],
+  "type": "typo3-cms-extension",
+  "license": "GPL-2.0",
+  "time": "2023-08-29",
+  "require": {
+    "typo3/cms-backend": "^11.5 || ^12.4.0"
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "extend_page_status_overlay"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Pschriner\\ExtendPageStatusOverlay\\": "Classes"
+    }
+  }
+}
