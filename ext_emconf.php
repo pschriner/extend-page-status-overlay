@@ -14,8 +14,8 @@
  */
 
 $EM_CONF[$_EXTKEY] = [
-    'title'          => 'Extend Page Status Indicator',
-    'description'    => 'See extendToSubpages status on page records',
+    'title'          => 'Extend Page Status Overlay',
+    'description'    => 'See extendToSubpages status on subpage icons',
     'author'         => 'Patrick Schriner',
     'author_email'   => 'patrick.schriner@diemedialen.de',
     'author_company' => 'Die Medialen GmbH',
