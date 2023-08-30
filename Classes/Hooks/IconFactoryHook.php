@@ -6,10 +6,14 @@ namespace Pschriner\ExtendPageStatusOverlay\Hooks;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\RootlineUtility;
+use TYPO3\CMS\Core\SingletonInterface;
 
-class IconFactoryHook
+/**
+ * As this hook is stateless, there is no harm in making it a singleton
+ */
+class IconFactoryHook implements SingletonInterface
 {
-    public function postOverlayPriorityLookup($table, array $row, array $status, $iconName)
+    public function postOverlayPriorityLookup($table, array $row, array $status, $iconName): string
     {
         if ($table === 'pages' && $iconName == '') {
             $rootLineUtility = GeneralUtility::makeInstance(RootlineUtility::class, (int)$row['uid']);
