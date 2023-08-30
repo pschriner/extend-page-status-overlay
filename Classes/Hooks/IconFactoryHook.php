@@ -29,6 +29,12 @@ class IconFactoryHook implements SingletonInterface
                     if ((int)($page['endtime'] ?? 0) > 0 && $GLOBALS['EXEC_TIME'] > (int)($page['endtime'] ?? 0)) {
                         return 'overlay-endtime-light';
                     }
+                    if ((int)($page['endtime'] ?? 0) > 0 && $GLOBALS['EXEC_TIME'] < (int)($page['endtime'] ?? 0)) {
+                        return 'overlay-scheduled-light';
+                    }
+                    if (!empty($page['fe_group'])) {
+                        return 'overlay-restricted-light';
+                    }
                 }
             }
         }
